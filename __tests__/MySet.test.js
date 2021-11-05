@@ -35,19 +35,19 @@ describe('класс MySet', () => {
   it('метод keys выводит элементы', () => {
     const set = new MySet(iterableObject);
 
-    expect(set.keys()).toEqual(iterableObject);
+    expect([...set.keys()]).toEqual(iterableObject);
   });
 
   it('метод values выводит элементы', () => {
     const set = new MySet(iterableObject);
 
-    expect(set.values()).toEqual(iterableObject);
+    expect([...set.values()]).toEqual(iterableObject);
   });
 
   it('метод entries выводит элементы', () => {
     const set = new MySet(iterableObject);
 
-    expect(set.entries()).toEqual([[1, 1], [2, 2], [3, 3], [4, 4]]);
+    expect([...set.entries()]).toEqual([[1, 1], [2, 2], [3, 3], [4, 4]]);
   });
 
   it('метод clear очищает данные', () => {

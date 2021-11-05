@@ -26,16 +26,16 @@ module.exports = class {
     yield* this.items; 
   }
 
-  keys() {
-    return [...this.items];
+  * keys() {
+    yield* this.items;
   }
 
-  values() {
-    return [...this.items];
+  * values() {
+    yield* this.items;
   }
 
-  entries() {
-    return this.items.map((item) => [item, item]);
+  * entries() {
+    yield* this.items.map((item) => [item, item]);
   }
 
   clear() {
